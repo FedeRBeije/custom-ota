@@ -1,0 +1,31 @@
+{
+  "cli": {
+    "version": ">= 0.57.0"
+  },
+  "build": {
+    "development-champion-testflight": {
+      "developmentClient": false,
+      "channel": "development",
+      "env": {
+        "APP_VARIANT": "development",
+        "TENANT": "champion"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production-champion-testflight": {
+      "env": {
+        "APP_VARIANT": "production",
+        "TENANT": "champion"
+      },
+      "channel": "production",
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

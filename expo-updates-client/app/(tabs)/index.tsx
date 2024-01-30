@@ -32,7 +32,7 @@ export default function TabOneScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>siamo contenti così</Text>
+      <Text style={styles.title}>siamo contenti così!!!!!!!!</Text>
       <View
         style={styles.separator}
         lightColor="#eee"

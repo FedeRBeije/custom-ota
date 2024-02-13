@@ -6,9 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+    "runtimeVersion": "1",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",

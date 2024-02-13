@@ -15,11 +15,14 @@ export default function TabOneScreen() {
   async function onFetchUpdateAsync() {
     try {
       const update = await Updates.checkForUpdateAsync();
-
-      if (update.isAvailable) {
-        await Updates.fetchUpdateAsync();
-        await Updates.reloadAsync();
-      }
+      alert(`update.isAvailable: ${update.isAvailable}`);
+      let updateAsync = await Updates.fetchUpdateAsync();
+      alert(`updateAsync: ${JSON.stringify(updateAsync, null, 2)}`);
+      // await Updates.reloadAsync();
+      // if (update.isAvailable) {
+      //   await Updates.fetchUpdateAsync();
+      //   await Updates.reloadAsync();
+      // }
     } catch (error) {
       // You can also add an alert() to see the error message in case of an error when fetching updates.
       alert(`Error fetching latest Expo update: ${error}`);
@@ -32,7 +35,7 @@ export default function TabOneScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>siamo contenti così!!!!!!!!</Text>
+      <Text style={styles.title}>GPA</Text>
       <View
         style={styles.separator}
         lightColor="#eee"

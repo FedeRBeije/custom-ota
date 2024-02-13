@@ -7,7 +7,7 @@
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "runtimeVersion": {
-      "policy": "sdkVersion"
+      "policy": "appVersion"
     },
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -28,7 +28,8 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "it.engds.customchina.develop"
+      "bundleIdentifier": "it.engds.customchina.develop",
+      "buildNumber": "1"
     },
     "android": {
       "adaptiveIcon": {

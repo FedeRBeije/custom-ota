@@ -33,10 +33,10 @@ ZA==
     <key>EXUpdatesEnabled</key>
     <true/>
     <key>EXUpdatesLaunchWaitMs</key>
-    <integer>0</integer>
+    <integer>30000</integer>
     <key>EXUpdatesRuntimeVersion</key>
     <string>1</string>
     <key>EXUpdatesURL</key>
-    <string>https://expo-updates.vercel.app/api/manifest</string>
+    <string>https://4ad7-93-49-120-113.ngrok-free.app/api/manifest</string>
   </dict>
 </plist>

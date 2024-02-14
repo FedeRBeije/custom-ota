@@ -3,6 +3,8 @@ import { StyleSheet, Button } from "react-native";
 import EditScreenInfo from "@/components/EditScreenInfo";
 import { Text, View } from "@/components/Themed";
 import { useEffect } from "react";
+import Constants from 'expo-constants';
+import { Asset } from 'expo-asset';
 import * as Updates from 'expo-updates';
 
 export default function TabOneScreen() {
@@ -15,14 +17,10 @@ export default function TabOneScreen() {
   async function onFetchUpdateAsync() {
     try {
       const update = await Updates.checkForUpdateAsync();
-      alert(`update.isAvailable: ${update.isAvailable}`);
-      let updateAsync = await Updates.fetchUpdateAsync();
-      alert(`updateAsync: ${JSON.stringify(updateAsync, null, 2)}`);
-      // await Updates.reloadAsync();
-      // if (update.isAvailable) {
-      //   await Updates.fetchUpdateAsync();
-      //   await Updates.reloadAsync();
-      // }
+      if (update.isAvailable) {
+        await Updates.fetchUpdateAsync();
+        await Updates.reloadAsync();
+      }
     } catch (error) {
       // You can also add an alert() to see the error message in case of an error when fetching updates.
       alert(`Error fetching latest Expo update: ${error}`);
@@ -35,7 +33,8 @@ export default function TabOneScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>GPA</Text>
+      <Text style={styles.title}>SA SA OTA 5</Text>
+      <Text style={styles.title}>{Constants?.expoConfig?.name}</Text>
       <View
         style={styles.separator}
         lightColor="#eee"
